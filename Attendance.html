@@ -15,19 +15,7 @@
 		</form>
 	</div>
 </body>
-<script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzy9vvOvl1gbruhmvy-5YN2eemHfv5cdWJ0VVXwILGu9rUFlFNjkWoRgSpiyO5HsTIP/exec'
-const form = document.querySelector('#form')
 
-	form.addEventListener('submit', e => {
-	e.preventDefault()
-	console.log(form)
-	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-	.then(response => { alert("submitted successfully, THANK YOU SO MUCH!") })
-	.catch(error => alert('Error!', error.message))
 
-} )
-
-</script>
 
 </html>
