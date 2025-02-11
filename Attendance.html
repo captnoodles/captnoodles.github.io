@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Attendance</title>
+<link rel="stylesheet" href="style.css">
+
+<meta charset="UFT-8">
+<meta name="viewport" content="width=device-width. initial-scale=1.0">
+</head>
+
+<body class="bg" >
+
+  <div class="container">
+    <form method="post"  name="contact-form" id="form">
+      <h4>Attendance</h4>
+      <input type="text" class="int" name="Name" required placeholder="Name">
+      <input type="text" class="int" name="Student-ID" required placeholder="Student-ID">
+      <input type="email" class="int" name="Email" required placeholder="Email">
+	  <div class="selection">
+		<select name="Set" required value="Select Set">
+			<option value="A">Select Set</option>
+			<option value="Set A">Set A</option>
+			<option value="Set B">Set B</option>
+			<input type="date" id="Date" name="Date" value=>
+
+		</select>
+		
+		</div>
+		<div class="reset">
+			<a href="Attendance.html"><input type="button" value="Reset" class="Reset"></a>
+		</div>
+<br>
+	<div class="pindutan">
+      <input  class="int" type="submit" value="Submit" id="submit"> <a href="table.html"><input class="int" type="button" value="View" id="Reset"></a>
+	  </div>
+		</form>
+	</div>
+</body>
+
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzy9vvOvl1gbruhmvy-5YN2eemHfv5cdWJ0VVXwILGu9rUFlFNjkWoRgSpiyO5HsTIP/exec'
+const form = document.querySelector('#form')
+
+	form.addEventListener('submit', e => {
+	e.preventDefault()
+	console.log(form)
+	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+	.then(response => { alert("submitted successfully, THANK YOU SO MUCH!") })
+	.catch(error => alert('Error!', error.message))
+
+} )
+///////////////////////////////////////////////////////
+var d= new Date()
+var yr=d.getFullYear();
+var month=d.getMonth()+1
+if(month<10){
+month='0'+month
+}
+var date=d.getDate();
+if(date<10){
+date='0'+date
+}
+var c_date=yr+"-"+month+"-"+date;
+document.getElementById('Date').value=c_date;
+
+</script>
+
+</html>
