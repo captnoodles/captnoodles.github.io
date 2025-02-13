@@ -37,7 +37,7 @@
 </body>
 
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzy9vvOvl1gbruhmvy-5YN2eemHfv5cdWJ0VVXwILGu9rUFlFNjkWoRgSpiyO5HsTIP/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzUn7XF2zs6te4FEuo1xqpVbGCaRNiRsVWEuIoMmH0U8-9b2q36tbmjF29S0MUhGS9ymA/exec'
 const form = document.querySelector('#form')
 
 	form.addEventListener('submit', e => {
