@@ -9,6 +9,14 @@
 
 <body class="bg" >
 
+<div class="front">
+	<img src="output-onlinegiftools.gif" alt="Snow" style="width:100%;" class="sharingan">
+<div>
+	<input  class="int1" type="submit" value="Attendance" id="submit" onclick="openPopup1()">
+</div>
+</div>
+
+<div class="popup1" id="popup1">
   <div class="container">
     <form method="post"  name="contact-form" id="form">
       <h4>Attendance</h4>
@@ -23,7 +31,7 @@
 			<input type="date" id="Date" name="Date" value=>
 
 		</select>
-		
+	
 		</div>
 		<div class="reset">
 			<a href="Attendance.html"><input type="button" value="Reset" class="Reset"></a>
@@ -33,10 +41,23 @@
       <input  class="int" type="submit" value="Submit" id="submit"> <a href="table.html"><input class="int" type="button" value="View" id="Reset"></a>
 	  </div>
 		</form>
+		
+		<button id="ok" type="button" onclick="closePopup1()">OK</button>
+	</div>
 	</div>
 </body>
 
 <script>
+let popup1 = document.getElementById("popup1");
+	
+	function closePopup1(){
+		popup1.classList.remove("open-popup1");
+	}
+		function openPopup1(){
+		popup1.classList.add("open-popup1");
+	}
+	
+
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyELFy1XM3139vfPrP9XaZ9xeIqL5zW5vZWn_JLT0dVIdD3W_89QsAVW2Texs8xuH-JZw/exec'
 const form = document.querySelector('#form')
 
